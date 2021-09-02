@@ -1,5 +1,9 @@
 Below are notes and examples from Week 2 lecture.
 
+# IN CLASS HTML/CSS/JS DEMO
+
+https://codepen.io/ryan-tate/pen/ExXywqe
+
 # SYNTAX RULES
 
 ### JS is __CASE SENSITIVE__
