@@ -1,3 +1,5 @@
+Below are notes and examples from Week 2 lecture.
+
 # SYNTAX RULES
 
 ### JS is __CASE SENSITIVE__
