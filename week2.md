@@ -42,7 +42,7 @@ if ( true ) {
   console.log ( 'this is false' )
 }
 
-// OR EVEN THIS (BUT WHY DO THIS???)
+// OR EVEN THIS 
 
 if ( true ) {
 
@@ -62,6 +62,8 @@ if ( true ) {
   
 }
 ```
+
+Be reasonable with your use of whitespace.  You probably don't want 10 JS statemennts on one line, but you probably also don't need 10 returns between executable statements, either.
 
 ### STRICT MODE
 
