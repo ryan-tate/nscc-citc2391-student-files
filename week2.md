@@ -424,4 +424,96 @@ const a = "Armstrong said \"That's one small step...\" when he walked on the moo
 
 # Objects 
 
+An __object__ is a collection of __methods__ and __properties__.  
 
+A __METHOD__ performs a function or does an action 
+
+A __PROPERTY__ is a data item.  
+
+
+A person can be an object.  It has properties like a name, a birth date, and a height.  It has methods like eat, speak, walk. 
+
+A car could be an object with properties like make, model, color.  Methods like accelerate, brake, startIgnition.
+
+```js 
+window.alert('This is an alert')
+```
+
+- WINDOW => the object 
+- DOT => says we're accessing a method or property of that object
+- ALERT => is the method (we know it's a method by the parentheses)
+- THIS IS A TEST => the parameter value we're passing into the method
+
+Prompt is similar to alert, except prompt actually takes an input back.  So we can store a result from a prompt.
+```js
+const name = window.prompt('Name a make of car')
+
+console.log(`The user entered ${name}`)
+```
+
+💡 If the user clicks `Cancel` the value will be `null`
+
+
+The `window` object is a special case because it's considered the global object for JS applications. As such, for this object __ONLY__ you may omit the object so 
+
+```js 
+window.alert('something')
+// becomes 
+alert('soemthing')
+// or 
+prompt('something')
+```
+
+### Prompting for Numerical Input
+
+```js 
+const userNumber = prompt("Enter a number", 21)
+let newNumber = userNumber + 1
+
+console.log(newNumber)
+```
+
+This gives 211, not 21.  Why? The value of `newNumber` is "21" as a string - so the + operator peforms string concatenation, NOT mathematical addition.
+
+Solution: use `parseInt()` or `parseFloat()` to convert a string a number 
+
+```js 
+const userNumber = prompt("Enter a number", 21)
+let newNumber = parseInt(userNumber) + 1
+
+console.log(newNumber)
+```
+
+OR we could parse around the prompt
+
+```js 
+const userNumber = parseInt(prompt("Enter a number", 21))
+let newNumber = userNumber + 1
+
+console.log(newNumber)
+```
+
+
+> IMPORTANT NOTE ON PARSING INTEGERS FROM DECIMAL NUMBERS!  `parseInt()` will __TRUNCATE__ a decimal value, not round.  So `parseInt(10.9)` yields `10` not `11`
+
+Parsing a number on a non-number value returns `NaN` or "Not a Number"
+
+### toFixed()
+
+The `toFixed()` method available on numbers. This does two things: 
+1.rounds to the specified number of decimal places 
+2. returns a STRING REPRESENTATION of that number.  
+
+```js
+const pi = 3.14159
+console.log(pi.toFixed(2)) // shows 3.14
+
+console.log(typeof pi.toFixed(2)) // <-- "STRING" -- NOTE THAT THIS IS NO LONGER A NUMBER!!!!
+```
+
+This also works to ADD decimal places if your original number had fewer.
+
+```js
+const i = 150
+console.log(i.toFixed(10)) // 150.0000000000
+```
